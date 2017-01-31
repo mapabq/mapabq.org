@@ -1,4 +1,4 @@
-var mymap = L.map('map', { scrollWheelZoom: false }).setView([35.0853, -106.6056], 13);
+var mymap = L.map('map', { scrollWheelZoom: false }).setView([35.1048139, -106.6509943], 13);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
     maxZoom: 18,
@@ -8,6 +8,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
     id: 'mapbox.streets'
 }).addTo(mymap);
 
-L.marker([35.0796915, -106.6074004])
+L.marker([35.1048139, -106.6509943])
     .addTo(mymap)
-    .bindPopup("<b>Tractor Brewing Company</b><br> 118 Tulane Dr SE,<br> Albuquerque, New Mexico 87106");
+    .bindPopup("<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102");
