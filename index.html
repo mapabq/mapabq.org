@@ -5,11 +5,9 @@
     <title>MAP|ABQ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -39,7 +37,8 @@
             <div class="panel-body">
                 <h2>Meetings</h2>
                 <p><b>Where: </b>Bow and Arrow Brewing Co.</p>
-                <p><b>When: </b>First Wednesday of the Month - 6PM-8PM</p>
+                <p><b>When: </b>First Wednesday of the Month</p>
+                <p><b>Next meeting: </b><span id="next-date"></span> - 6PM-8PM</p>
 
                 <div id="map"></div>
             </div>
@@ -53,7 +52,9 @@
             </div>
         </div>
     </div>
-    <script src="js/map.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 
 </html>
