@@ -1,10 +1,8 @@
         function secondWednesday(month) {
             var d = new Date();
-            d.setMonth(month)
             d.setDate(1);
-
             while (d.getDay() !== 3) {
-                d.setDate(d.getDate() + 8);
+                d.setDate(d.getDate() + 4);
                 d.setHours(23, 59, 59, 999);
             }
 
