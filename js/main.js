@@ -1,3 +1,4 @@
+        /*
         function secondWednesday(month) {
             var d = new Date();
             d.setDate(1);
@@ -37,6 +38,7 @@
         var nextDateEl = document.getElementById("next-date");
         var nextDate = checkDate(new Date());
         nextDateEl.innerText = formatDate(nextDate);
+        */
 
         var mymap = L.map('map', {
             scrollWheelZoom: false
