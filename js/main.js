@@ -1,24 +1,24 @@
-        /*
-        function secondWednesday(month) {
-            var d = new Date();
+        function getWednesdays() {
+            var d = new Date(),
+                month = d.getMonth(),
+                wednesdays = [];
+
             d.setDate(1);
             while (d.getDay() !== 3) {
-                d.setDate(d.getDate() + 4);
-                d.setHours(23, 59, 59, 999);
+                d.setDate(d.getDate() + 1);
             }
 
-            return d;
+            while (d.getMonth() === month) {
+                wednesdays.push(new Date(d.getTime()));
+                d.setDate(d.getDate() + 7);
+            }
+            return wednesdays;
         }
 
-        function checkDate(date) {
-            var month = date.getMonth();
-            wednesday = secondWednesday(month);
-            if (date > wednesday) {
-                month = month + 1;
-            }
-            wednesday = secondWednesday(month);
-            return wednesday;
-        }
+        var wednesdays = getWednesdays();
+        var nextDateEl = document.getElementById("next-date");
+        var secondWednesday = wednesdays[1];
+        nextDateEl.innerText = formatDate(secondWednesday);
 
         function formatDate(date) {
             var monthNames = [
@@ -35,14 +35,15 @@
             return monthNames[monthIndex] + " " + day + " " + year;
         }
 
-        var nextDateEl = document.getElementById("next-date");
-        var nextDate = checkDate(new Date());
-        nextDateEl.innerText = formatDate(nextDate);
-        */
 
+     
+        var bowAndArrow = [35.1048139, -106.6509943];
+        var bAInfo = "<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102"
+        var flyingStar = [35.079832, -106.606297];
+        var flyingStarInfo = "<b>Flying Star Cafe</b><br> 3416 Central Ave SE<br> Albuquerque, NM 87106"
         var mymap = L.map('map', {
             scrollWheelZoom: false
-        }).setView([35.1048139, -106.6509943], 13);
+        }).setView(flyingStar, 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
             maxZoom: 18,
@@ -52,6 +53,6 @@
             id: 'mapbox.streets'
         }).addTo(mymap);
 
-        L.marker([35.1048139, -106.6509943])
+        L.marker(flyingStar)
             .addTo(mymap)
-            .bindPopup("<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102");
+            .bindPopup(flyingStarInfo);
