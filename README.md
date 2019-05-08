@@ -1,3 +1,3 @@
-## MAP|ABQ ##
+## MapABQ ##
 
 https://mapabq.org
