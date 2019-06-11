@@ -1,21 +1,26 @@
-        function getWednesdays() {
-            var d = new Date(),
-                month = d.getMonth(),
-                wednesdays = [];
-
-            d.setDate(1);
-            while (d.getDay() !== 3) {
-                d.setDate(d.getDate() + 1);
+        function getWednesdays(d) {
+            var date = new Date(d.getTime());
+            var month = date.getMonth(),
+            wednesdays = [];
+            date.setDate(1);
+            while (date.getDay() !== 3) {
+                date.setDate(date.getDate() + 1);
             }
 
-            while (d.getMonth() === month) {
-                wednesdays.push(new Date(d.getTime()));
-                d.setDate(d.getDate() + 7);
+            while (date.getMonth() === month) {
+                wednesdays.push(new Date(date.getTime()));
+                date.setDate(date.getDate() + 7);
             }
+
             return wednesdays;
         }
-
-        var wednesdays = getWednesdays();
+        var d = new Date();
+        var wednesdays = getWednesdays(d);
+        if (wednesdays[1] < d) {
+            d.setMonth(d.getMonth() + 1);
+            d.setDate(1);
+            wednesdays = getWednesdays(d);
+        }
         var nextDateEl = document.getElementById("next-date");
         var secondWednesday = wednesdays[1];
         nextDateEl.innerText = formatDate(secondWednesday);
