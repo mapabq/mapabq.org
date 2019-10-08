@@ -46,9 +46,13 @@
         var bAInfo = "<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102"
         var flyingStar = [35.079832, -106.606297];
         var flyingStarInfo = "<b>Flying Star Cafe</b><br> 3416 Central Ave SE<br> Albuquerque, NM 87106"
+        var bosqueBrewing = [35.080133, -106.613061];
+        var bosqueBrewingInfo = "<b>Bosque Brewing Co. Public House - Nob Hill</b><br> 106 Girard Blvd SE B <br> Albuquerque, NM 87106"
+        var meetingLocation = bosqueBrewing;
+        var meetingLocationInfo = bosqueBrewingInfo;
         var mymap = L.map('map', {
             scrollWheelZoom: false
-        }).setView(flyingStar, 13);
+        }).setView(meetingLocation, 13);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
             maxZoom: 18,
@@ -58,6 +62,6 @@
             id: 'mapbox.streets'
         }).addTo(mymap);
 
-        L.marker(flyingStar)
+        L.marker(meetingLocation)
             .addTo(mymap)
-            .bindPopup(flyingStarInfo);
+            .bindPopup(meetingLocationInfo);
