@@ -48,8 +48,8 @@
         var flyingStarInfo = "<b>Flying Star Cafe</b><br> 3416 Central Ave SE<br> Albuquerque, NM 87106"
         var bosqueBrewing = [35.080133, -106.613061];
         var bosqueBrewingInfo = "<b>Bosque Brewing Co. Public House - Nob Hill</b><br> 106 Girard Blvd SE B <br> Albuquerque, NM 87106"
-        var meetingLocation = bosqueBrewing;
-        var meetingLocationInfo = bosqueBrewingInfo;
+        var meetingLocation = bowAndArrow;
+        var meetingLocationInfo = bAInfo;
         var mymap = L.map('map', {
             scrollWheelZoom: false
         }).setView(meetingLocation, 13);
