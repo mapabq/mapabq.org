@@ -6,7 +6,6 @@
             while (date.getDay() !== 3) {
                 date.setDate(date.getDate() + 1);
             }
-
             while (date.getMonth() === month) {
                 wednesdays.push(new Date(date.getTime()));
                 date.setDate(date.getDate() + 7);
@@ -39,8 +38,6 @@
 
             return monthNames[monthIndex] + " " + day + " " + year;
         }
-
-
      
         var bowAndArrow = [35.1048139, -106.6509943];
         var bAInfo = "<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102"
@@ -50,15 +47,12 @@
         var bosqueBrewingInfo = "<b>Bosque Brewing Co. Public House - Nob Hill</b><br> 106 Girard Blvd SE B <br> Albuquerque, NM 87106"
         var meetingLocation = bowAndArrow;
         var meetingLocationInfo = bAInfo;
-        var mymap = L.map('map', {
-            scrollWheelZoom: false
-        }).setView(meetingLocation, 13);
+        var mymap = L.map('map').setView(meetingLocation, 16);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             id: 'mapbox.streets'
         }).addTo(mymap);
 
