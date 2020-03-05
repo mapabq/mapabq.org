@@ -22,7 +22,7 @@
         }
         var nextDateEl = document.getElementById("next-date");
         var secondWednesday = wednesdays[1];
-        nextDateEl.innerText = formatDate(secondWednesday);
+        //nextDateEl.innerText = formatDate(secondWednesday);
 
         function formatDate(date) {
             var monthNames = [
