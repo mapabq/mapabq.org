@@ -21,8 +21,8 @@
             wednesdays = getWednesdays(d);
         }
         var nextDateEl = document.getElementById("next-date");
-        var secondWednesday = wednesdays[1];
-        //nextDateEl.innerText = formatDate(secondWednesday);
+        var secondWednesday = wednesdays[2];
+        nextDateEl.innerText = formatDate(secondWednesday);
 
         function formatDate(date) {
             var monthNames = [
@@ -47,6 +47,7 @@
         var bosqueBrewingInfo = "<b>Bosque Brewing Co. Public House - Nob Hill</b><br> 106 Girard Blvd SE B <br> Albuquerque, NM 87106"
         var meetingLocation = bowAndArrow;
         var meetingLocationInfo = bAInfo;
+        var abqCenter = [35.0844,106.6504]
         var mymap = L.map('map').setView(meetingLocation, 16);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
@@ -55,7 +56,8 @@
                 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             id: 'mapbox.streets'
         }).addTo(mymap);
-
+        /*
         L.marker(meetingLocation)
             .addTo(mymap)
             .bindPopup(meetingLocationInfo);
+            */
