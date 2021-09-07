@@ -46,7 +46,7 @@
         var abqCenter = [35.0844,106.6504]
         var mymap = L.map('map').setView(meetingLocation, 16);
 
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYWJxIiwiYSI6ImNpeHRxc3Y1MjAwNTQycW56d3NsMmNwYXkifQ.S9tHYTJkndcIGC5RWh_7Hw', {
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=ppk.eyJ1IjoicnVzc2JpZ2dzIiwiYSI6ImNrdGFhazRqdTFrM2kydm5yYnVnNTRncmoifQ.JnbD-9CDk7zHMyD2R-E0yQ', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
                 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
