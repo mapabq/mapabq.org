@@ -41,10 +41,6 @@
      
         var bowAndArrow = [35.1048139, -106.6509943];
         var bAInfo = "<b>Bow and Arrow Brewing Co.</b><br> 608 McKnight Ave NW,<br> Albuquerque, NM 87102"
-        var flyingStar = [35.079832, -106.606297];
-        var flyingStarInfo = "<b>Flying Star Cafe</b><br> 3416 Central Ave SE<br> Albuquerque, NM 87106"
-        var bosqueBrewing = [35.080133, -106.613061];
-        var bosqueBrewingInfo = "<b>Bosque Brewing Co. Public House - Nob Hill</b><br> 106 Girard Blvd SE B <br> Albuquerque, NM 87106"
         var meetingLocation = bowAndArrow;
         var meetingLocationInfo = bAInfo;
         var abqCenter = [35.0844,106.6504]
@@ -60,4 +56,4 @@
         L.marker(meetingLocation)
             .addTo(mymap)
             .bindPopup(meetingLocationInfo);
-            */
+        */
